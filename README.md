@@ -1,14 +1,3 @@
 # NCTU_Degital_Medicine
 
-# Read text to dataframe
-
-# Text Processing
-
-# Freq words
-
-# Training, Testing
-
-# TF-IDF
-
-# Confusion matrix
-
+## Case1 : Smoking status detection -- [link](https://github.com/boyuchen0224/NCTU_Digital_Medicine/tree/main/Case1_Smoking_Status_Detection/README.md)
