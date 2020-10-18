@@ -7,10 +7,10 @@
 - Our [**final predictions**](https://github.com/boyuchen0224/NCTU_Digital_Medicine/blob/main/Case1_Smoking_Status_Detection/final_prediction.txt)
 
 ## Data pre-processing
-**Step 1** : Tokenizing strings in list of strings
-**Step 2** : Lemmatization with NLTK
-**Step 3** : Stemming words with NLTK
-**Step 4** : Removing stop words with NLTK in Python
+- **Step 1** : Tokenizing strings in list of strings
+- **Step 2** : Lemmatization with NLTK
+- **Step 3** : Stemming words with NLTK
+- **Step 4** : Removing stop words with NLTK in Python
 
 ## Manual data analysis
 - Find smoke keywords : 
@@ -19,12 +19,12 @@
 **deny, no, not, negative, quit, has, was, past, former, ex, is, current**
 
 ## Traing and Testing
-**Step 1** : **Data pre-processing** 
-**Step 2** : **Filter keywords** as mentioned above
-**Step 3** : Get **tf-idf** values
-**Step 4** : Random **split data** to training and testing
-**Step 5** : Use [**SklearnClassifier**](https://pythonprogramming.net/sklearn-scikit-learn-nltk-tutorial/) to train and predict
-**Step 6** : Output accuracy and predictions
+- **Step 1** : **Data pre-processing**
+- **Step 2** : **Filter keywords** as mentioned above
+- **Step 3** : Get **tf-idf** values
+- **Step 4** : Random **split data** to training and testing
+- **Step 5** : Use [**SklearnClassifier**](https://pythonprogramming.net/sklearn-scikit-learn-nltk-tutorial/) to train and predict
+- **Step 6** : Output accuracy and predictions
 
 ## Resources
 - [GeeksforGeeks](https://www.geeksforgeeks.org/removing-stop-words-nltk-python/?ref=lbp)
