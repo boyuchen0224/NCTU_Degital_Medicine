@@ -3,6 +3,8 @@
 ## Requirement
 - **Jupyter notebook** with **Python 3.7.3**
 - `pip3 install -r requirement.txt`
+- Run [**analysis.ipynb**](https://github.com/boyuchen0224/NCTU_Digital_Medicine/blob/main/Case1_Smoking_Status_Detection/analysis.ipynb) on jupyter notebook
+- Our [**final predictions**](https://github.com/boyuchen0224/NCTU_Digital_Medicine/blob/main/Case1_Smoking_Status_Detection/final_prediction.txt)
 
 ## Data pre-processing
 **Step 1** : Tokenizing strings in list of strings
@@ -23,7 +25,6 @@
 **Step 4** : Random **split data** to training and testing
 **Step 5** : Use [**SklearnClassifier**](https://pythonprogramming.net/sklearn-scikit-learn-nltk-tutorial/) to train and predict
 **Step 6** : Output accuracy and predictions
-
 
 ## Resources
 - [GeeksforGeeks](https://www.geeksforgeeks.org/removing-stop-words-nltk-python/?ref=lbp)
