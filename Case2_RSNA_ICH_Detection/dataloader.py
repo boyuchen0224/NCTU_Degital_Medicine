@@ -14,8 +14,8 @@ def getData(mode):
         label = pd.read_csv('..\\Train_png_all\\aug_train_label.csv',  header=None)
         return np.squeeze(img.values), np.squeeze(label.values)
     else:
-        img = pd.read_csv('..\\Train_png_all\\aug_test_img.csv', header=None)
-        label = pd.read_csv('..\\Train_png_all\\aug_test_label.csv', header=None)
+        img = pd.read_csv('..\\Train_png_all\\test_img.csv', header=None)
+        label = pd.read_csv('..\\Train_png_all\\test_label.csv', header=None)
         return np.squeeze(img.values), np.squeeze(label.values)
 
 
@@ -66,9 +66,19 @@ def transform_func():
     #     transforms.Normalize(mean=[0.485, 0.456, 0.406],
     #                          std=[0.229, 0.224, 0.225])
     # ])
+
+    # # efficientnet-b0 model 001 and 002
+    # return transforms.Compose([
+    #     transforms.CenterCrop((512,512)),
+    #     transforms.ToTensor()
+    # ])
+     
+    # # efficientnet-b0 model 003
     return transforms.Compose([
         transforms.CenterCrop((512,512)),
-        transforms.ToTensor()
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                             std=[0.229, 0.224, 0.225])
     ])    
 
 if __name__ == '__main__':

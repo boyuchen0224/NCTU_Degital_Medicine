@@ -119,13 +119,13 @@ if __name__ == "__main__":
     #   to the ImageFolder structure
     data_dir = "..\\Train_png_all\\photo\\"
     # Models to choose from [resnet18, resnet50]
-    model_name = "resnet18"   
+    model_name = "resnet50"   
     # number of output classes in the model
     num_classes = 6
     # Batch size for training (change depending on how much memory you have)
     batch_size = 10
     # load the model from "load_model_path"
-    load_model_path = "..\\log\\" + model_name + "_001" +".model"
+    load_model_path = "..\\log\\" + model_name + "_004" +".model"
 
     print(load_model_path)
     evaluate_main(data_dir, model_name, num_classes, batch_size, load_model_path)

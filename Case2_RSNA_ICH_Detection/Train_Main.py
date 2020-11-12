@@ -42,11 +42,12 @@ def initialize_model(model_name, num_classes, feature_extract, use_pretrained=Tr
         input_size = 512
     
     elif model_name == "customer":
-        model_ft = torch.load("..\\log\\resnet_customer_net.fullmodel")
-        set_parameter_requires_grad(model_ft, feature_extract)
-        num_ftrs = model_ft.fc.in_features
-        model_ft.fc = nn.Linear(num_ftrs, num_classes)
         input_size = 512
+        model_ft = EfficientNet.from_pretrained("efficientnet-b0")
+        set_parameter_requires_grad(model_ft, feature_extract)
+        num_ftrs = model_ft._fc.in_features
+        model_ft._fc = nn.Linear(num_ftrs, num_classes)
+        model_ft.load_state_dict(torch.load("..\\log\\efficientnet-b0_006.model"))
 
     elif model_name == "efficientnet-b0":
         #input_size = EfficientNet.get_image_size(model_name)
@@ -197,11 +198,11 @@ if __name__ == '__main__':
     # to the ImageFolder structure
     data_dir = "..\\Train_png_all\\photo\\"
     # Batch size for training (change depending on how much memory you have)
-    batch_size = 20
+    batch_size = 10
     # Number of epochs to train for
     num_epochs = 10
     # Models to choose from [resnet18, resnet50, customer, efficientnet-b0]
-    model_name = "resnet18"    
+    model_name = "customer"    
     # number of classes of learining
     num_classes = 6
     # Flag for feature extracting. When False, we finetune the whole model,
@@ -210,7 +211,7 @@ if __name__ == '__main__':
     # use the pretrained weights
     use_pretrained = True
     # save the model to "model_save_path"
-    model_save_path = "..\\log\\" + model_name + "_001" +".model"
+    model_save_path = "..\\log\\" + model_name + "_007" +".model"
     
     train_main(data_dir, model_name, num_classes, batch_size, num_epochs, 
                 feature_extract, use_pretrained, model_save_path)
